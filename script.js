@@ -17,7 +17,7 @@ function getLyrics(lyrics){
                 div.classList = 'single-result row align-items-center my-3 p-3';
                 div.innerHTML = `
                                 <div class="col-md-9">
-                                    <h3 class="lyrics-name">${lyric.album.title}</h3>
+                                    <h3 class="lyrics-name">${lyric.title}</h3>
                                     <p class="author lead">Album by <span>${lyric.artist.name}</span></p>
                                 </div>
                                 <div class="col-md-3 text-md-right text-center">
