@@ -21,28 +21,18 @@ function getLyrics(lyrics){
                                     <p class="author lead">Album by <span>${lyric.artist.name}</span></p>
                                 </div>
                                 <div class="col-md-3 text-md-right text-center">
-                                    <button class="btn btn-success" onClick='getFullLyric(${lyric.artist.name},${lyric.album.title})'>Get Lyrics</button>
+                                    <button class="btn btn-success" onClick="getFullLyric('${lyric.artist.name}','${lyric.album.title}')">Get Lyrics</button>
                                 </div>
                             `
                 displayResult.appendChild(div);               
             });
-        })
+        });
 };
 
-function getFullLyric(artist, title){
+function getFullLyric(artist,title){
     fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
-        .then(res => res.json())
+        .then(res=> res.json())
         .then(data=>{
-            console.log(data);
+            console.log(data)
         })
-}
-
-{/* <div class="single-result row align-items-center my-3 p-3">
-                    <div class="col-md-9">
-                        <h3 class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span>Washed Out</span></p>
-                    </div>
-                    <div class="col-md-3 text-md-right text-center">
-                        <button class="btn btn-success">Get Lyrics</button>
-                    </div>
-                </div> */}
+};
