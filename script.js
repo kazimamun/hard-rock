@@ -10,8 +10,7 @@ function getLyrics(lyrics){
     fetch(`https://api.lyrics.ovh/suggest/${lyrics}`)
         .then(res => res.json())
         .then(data=>{
-            const tenLyrics = data.data.slice(0,10);
-            console.log(tenLyrics)            
+            const tenLyrics = data.data.slice(0,10);         
             const displayResult = document.querySelector('.lyrics-details');
             tenLyrics.map(lyric => {
                 const div = document.createElement('div');
