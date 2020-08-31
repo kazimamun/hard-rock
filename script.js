@@ -54,11 +54,11 @@ function errorData(data, contentArea, title){
     }  
     const reloadBtn = document.createElement('button');
     reloadBtn.innerText = 'Search Again';
-    reloadBtn.classList = 'btn btn-success';
+    reloadBtn.classList = 'btn btn-success btn-lg btn-block';
     reloadBtn.addEventListener('click',()=>{
         location.reload();
     })
     // contentArea.innerText = '';
-    div.append(pre,reloadBtn);
-    contentArea.appendChild(div);
+    div.appendChild(pre);
+    contentArea.append(div,reloadBtn);
 }
